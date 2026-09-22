@@ -224,7 +224,7 @@ public class WrappedBlockState {
                 cache.computeIfAbsent(state.data, StateCacheValue::new);
             }
         }
-        for (byte i = 0; i < HIGHEST_MAPPING_INDEX; i++) {
+        for (byte i = 0; i <= HIGHEST_MAPPING_INDEX; i++) {
             WrappedBlockState[] states = BY_ID[i];
             if (states == null) {
                 continue; // not loaded yet
